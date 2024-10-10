@@ -1,0 +1,33 @@
+{
+  "create": {
+    "name": "Adam Smith",
+    "email": "Adam@qa.com",
+    "password": "123456"
+  },
+  "empty_name": {
+    "email": "emptyname@qa.com",
+    "password": "123456"
+  },
+  "empty_email": {
+    "name": "John Joe",    
+    "password": "123456"
+  },
+  "empty_field": {
+   
+  },
+  "empty_pass": {
+    "name": "",
+    "email": "james@qa.com"    
+  },
+  "login_no_email": {
+    "password": "123456"   
+  },
+  "login_no_password": {
+    "email": "john@qa.com"   
+  },
+  "shopping": {
+    "name": "Lamar Walent",
+    "email": "Walent@qa.com",
+    "password": "123456"
+  }
+}
