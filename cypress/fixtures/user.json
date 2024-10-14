@@ -16,7 +16,7 @@
    
   },
   "empty_pass": {
-    "name": "",
+    "name": "James Blond",
     "email": "james@qa.com"    
   },
   "login_no_email": {
@@ -29,5 +29,17 @@
     "name": "Lamar Walent",
     "email": "Walent@qa.com",
     "password": "123456"
+  },
+  "billing_info": {
+    "fname": "Xuxa",
+    "lname": "Meneguel",
+    "cname": "Rede Globo",
+    "email": "xuxa@globo.com",
+    "country":"usa",
+    "city": "Aland Islands",
+    "zip": "12345678",
+    "faddress": "Rua sem saida, 10",
+    "messages": "Entregas apenas pela manhã"
+
   }
 }

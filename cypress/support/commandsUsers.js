@@ -55,3 +55,17 @@ Cypress.Commands.add('registerAllEmptyField', () => {
     cy.get('#btnLogin').click()  
      
  })
+ //BILLING INFORMATION
+
+Cypress.Commands.add('fillBillingInfo', (user) => {  
+   if (user.fname) cy.get('#fname').type(user.fname);
+   if (user.lname) cy.get('#lname').type(user.lname);
+   if (user.cname) cy.get('#cname').type(user.cname);
+   if (user.email) cy.get('#email').type(user.email);
+   if (user.country) cy.get('#country').select(user.country);
+   if (user.city) cy.get('#city').select(user.city);
+   if (user.zip) cy.get('#zip').type(user.zip);
+   if (user.faddress) cy.get('#faddress').type(user.faddress);
+   if (user.messages) cy.get('#messages').type(user.messages);
+ });
+ 

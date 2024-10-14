@@ -32,7 +32,7 @@ describe('/wishlist functionallity', () => {
 
     cy.get('#Wishlist_area > div > div').should('have.length', 1)
   })
-  it.only('CT-004 adding 3 product to a whishing list and then to the cart', function () {
+  it('CT-004 adding 3 product to a whishing list and then to the cart', function () {
     cy.threeProductsToWishlist()
 
     cy.get('#swal2-title').should('contain.text', 'Success')
