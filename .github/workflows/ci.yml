@@ -1,35 +1,22 @@
-name: CI
+name: Cypress Tests
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: 
+ workflow_dispatch:
 
 jobs:
-  build:
+  cypress-electron-tests:
     runs-on: ubuntu-latest
+    container:
+     image: cypress/browsers:node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
+     options: --user 1001
+    steps: 
+     - name: get code
+       uses: actions/checkout@v4.2.0
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+     - name: Install dependencies
+       run: yarn install
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'  # Ajuste para a versão do Node.js que você está usando
+     - name: Run E2E tests
+       run: node runner-electron.js
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run Cypress tests
-        run: npm run test  # Ajuste se o comando para rodar os testes for diferente
-
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: cypress-results
-          path: cypress/results  # Ajuste para o caminho onde seus resultados são armazenados
+   
