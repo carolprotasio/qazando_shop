@@ -17,6 +17,6 @@ jobs:
        run: yarn install
 
      - name: Run E2E tests
-       run: node runner-electron.js
+       run: node runner.js
 
    
